@@ -14,5 +14,7 @@ namespace BankAPIApplication.Entities
         [ForeignKey("UserId")]
         public User User { get; set; }
 
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
     }
 }

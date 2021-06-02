@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using Newtonsoft.Json;
 
 namespace BankAPIApplication.Entities
@@ -14,6 +16,8 @@ namespace BankAPIApplication.Entities
 
         [JsonIgnore]
         public string Password { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
 
         [JsonIgnore]
         public IList<Transaction> Transactions { get; set; }

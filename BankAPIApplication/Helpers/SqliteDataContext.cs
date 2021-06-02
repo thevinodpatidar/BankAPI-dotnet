@@ -18,6 +18,12 @@ namespace BankAPIApplication.Helpers
             modelBuilder.Entity<Transaction>()
                 .Property(t => t.Mode)
                 .HasConversion<string>();
+            modelBuilder.Entity<Transaction>()
+               .Property(b => b.CreatedAt)
+               .HasDefaultValueSql("getdate()");
+            modelBuilder.Entity<User>()
+                .Property(b => b.CreatedAt)
+                .HasDefaultValueSql("getdate()");
         }
     }
 }
